@@ -1,11 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Par ou Ímpar</title>
 </head>
+
+<h1>Retornador de números</h1>
 <body>
-    <p>Teste de paragrafo editado pelo github para puxar com o git via VSCODE</p>    
+    <p>No campo seguinte adicione um número:</p> 
+    <input type = number id = "number" placeholder = "Digite um número">
+    <button onclick = "verificar(number)" >verificar</button>
+    <script>function verificar(number){
+        number = document.getElementById("number").value;
+        if (number ===""){
+        document.getElementById("result").innerHTML = "Digite um número válido";
+        return;
+        } if (number % 2 ==0){
+            document.getElementById("result").innerHTML = "número par";
+        } else {
+            document.getElementById("result").innerHTML = "número impar";
+        }
+    }
+</script>
 </body>
+<p>Resultado: <span id = "result"></span></p>
 </html>
